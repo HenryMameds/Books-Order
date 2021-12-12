@@ -17,12 +17,15 @@ import Header from '../../Components/Header'
 const LoginPage = lazy(() => import("../Login/Page"));
 const RegisterPage = lazy(() => import("../Register/Page"));
 
+// Modules
+const ProductList = lazy(() => import("../../../Modules/ProductList/Page"));
+
 const Navigation = () => {
   const routes = (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      {/* <Route path="/product-list" element={< />} /> */}
+      <Route path="/product-list" element={<ProductList />} />
       <Route path="/" element={<Navigate to="/login" />} />
     </Routes>
   );
