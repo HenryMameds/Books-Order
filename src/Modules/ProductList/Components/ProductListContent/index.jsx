@@ -66,8 +66,8 @@ const ProductListContent = () => {
       <Paper component="form" className={classes.root}>
         <InputBase
           className={classes.input}
-          placeholder="Buscar Produto"
-          inputProps={{ "aria-label": "buscar produto" }}
+          placeholder="Search Product"
+          inputProps={{ "aria-label": "search product" }}
         />
         <IconButton
           type="submit"
@@ -104,9 +104,9 @@ const ProductListContent = () => {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
+              <CardActions style={{justifyContent: 'center'}}>
                 <Button size="small" color="primary">
-                  Adicionar ao Carrinho
+                  Add to Cart
                 </Button>
               </CardActions>
             </Card>

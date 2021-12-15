@@ -1,8 +1,9 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import ShoppingCartOutlined from "@material-ui/icons/ShoppingCartOutlined";
 
 const Header = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { pathname } = location;
 
   if (["/login"].includes(pathname)) return null;
@@ -21,7 +22,10 @@ const Header = () => {
       }}
     >
       <div>HMSOrder</div>
-      <div>Ver Carrinho</div>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        View Cart
+        <ShoppingCartOutlined style={{ marginLeft: "15px" }} />
+      </div>
     </div>
   );
 };

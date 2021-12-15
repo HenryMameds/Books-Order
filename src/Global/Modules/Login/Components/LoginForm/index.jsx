@@ -6,7 +6,7 @@ import {
   FormControl,
 } from "@material-ui/core";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Notification from "../../../../Components/Notification";
 import {
   LoginFormContainer,
@@ -19,7 +19,7 @@ import {
 } from "./LoginForm_style";
 
 const LoginForm = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
