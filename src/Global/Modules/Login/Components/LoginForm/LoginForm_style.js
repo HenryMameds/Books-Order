@@ -35,6 +35,7 @@ export const StyledButton = styled(Button)`
   height: 44px;
   box-shadow: none !important;
   margin-top: 40px !important;
+  text-transform: none !important;
 `;
 
 export const RecoverPasswordSection = styled.span`

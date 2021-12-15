@@ -38,7 +38,8 @@ const useStylesCard = makeStyles({
     maxWidth: 400,
     maxHeight: 400,
     marginBottom: "2%",
-    marginLeft: "1%",
+    marginLeft: "0.5%",
+    marginRight: "0.5%",
   },
 });
 

@@ -68,7 +68,7 @@ const RegisterForm = () => {
   };
   return (
     <PainelContainer>
-      <Typography variant="h1" style={{marginBottom: '5%'}}> Cadastre a sua conta</Typography>
+      <Typography variant="h1" style={{marginBottom: '5%'}}> Register your account</Typography>
 
       <form
         noValidate
@@ -82,7 +82,7 @@ const RegisterForm = () => {
         }}
       >
         <FormControl variant="outlined" style={{ width: "50%" }}>
-          <InputLabel htmlFor="nome-input">Nome</InputLabel>
+          <InputLabel htmlFor="nome-input">Name</InputLabel>
           <StyledTextField
             id="nome-input"
             fullWidth
@@ -117,7 +117,7 @@ const RegisterForm = () => {
           />
         </FormControl>
         <FormControl variant="outlined" style={{ width: "50%" }}>
-          <InputLabel htmlFor="password-input">Senha</InputLabel>
+          <InputLabel htmlFor="password-input">Password</InputLabel>
           <OutlinedInputStyle
             id="password-input"
             type={showPassword ? "text" : "password"}
@@ -146,7 +146,7 @@ const RegisterForm = () => {
           color="primary"
           disabled={Boolean(!isFormValid || !name || !username || !password)}
         >
-          Cadastrar
+          Register
         </StyledButton>
       </form>
     </PainelContainer>

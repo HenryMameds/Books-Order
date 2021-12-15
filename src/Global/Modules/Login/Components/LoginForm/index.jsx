@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   InputAdornment,
   IconButton,
   InputLabel,
   FormControl,
-} from '@material-ui/core';
-import { Visibility, VisibilityOff } from '@material-ui/icons';
-import { useNavigate } from 'react-router-dom';
-import Notification from '../../../../Components/Notification';
+} from "@material-ui/core";
+import { Visibility, VisibilityOff } from "@material-ui/icons";
+import { useNavigate } from "react-router-dom";
+import Notification from "../../../../Components/Notification";
 import {
   LoginFormContainer,
   FormSection,
@@ -15,25 +15,25 @@ import {
   StyledTextField,
   StyledButton,
   RecoverPasswordLink,
-  RecoverPasswordSection
-} from './LoginForm_style';
+  RecoverPasswordSection,
+} from "./LoginForm_style";
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [notificationFeedback, setNotificationFeedback] = useState({
-    type: '',
-    message: '',
+    type: "",
+    message: "",
     open: false,
-    vertical: 'bottom',
-    horizontal: 'right',
+    vertical: "bottom",
+    horizontal: "right",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-/*     dispatch(actions.signInAction({ email, password }, false))
+    /*     dispatch(actions.signInAction({ email, password }, false))
       .then(() => {
         navigate('/orders');
       })
@@ -59,11 +59,11 @@ const LoginForm = () => {
 
   const handleClose = () => {
     setNotificationFeedback({
-      type: '',
-      message: '',
+      type: "",
+      message: "",
       open: false,
-      vertical: 'bottom',
-      horizontal: 'right',
+      vertical: "bottom",
+      horizontal: "right",
     });
   };
 
@@ -87,7 +87,7 @@ const LoginForm = () => {
           <InputLabel htmlFor="password-input">Senha</InputLabel>
           <OutlinedInputStyle
             id="password-input"
-            type={showPassword ? 'text' : 'password'}
+            type={showPassword ? "text" : "password"}
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             endAdornment={
@@ -106,10 +106,8 @@ const LoginForm = () => {
           />
         </FormControl>
         <RecoverPasswordSection>
-          Não tem cadastro?{' '}
-          <RecoverPasswordLink to="/register">
-            Clique aqui
-          </RecoverPasswordLink>
+          No registration?{" "}
+          <RecoverPasswordLink to="/register">Click here</RecoverPasswordLink>
         </RecoverPasswordSection>
         <StyledButton
           id="login-form-submit"
@@ -119,7 +117,7 @@ const LoginForm = () => {
           color="primary"
           disabled={Boolean(!email || !password)}
         >
-          Entrar
+          Log In
         </StyledButton>
         <Notification
           openSnackbar={notificationFeedback.open}
