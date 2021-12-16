@@ -1,6 +1,5 @@
 import { InputLabel, FormControl } from "@material-ui/core";
 import { useState } from "react";
-import Notification from "../../../Global/Components/Notification";
 
 import {
   ProductRegistrationContainer,

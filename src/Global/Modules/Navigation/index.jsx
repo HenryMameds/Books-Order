@@ -19,6 +19,7 @@ const MyCart = lazy(() => import("../../../Modules/Cart/Page"));
 const ProductRegistration = lazy(() =>
   import("../../../Modules/ProductRegistration/Page")
 );
+const WishList = lazy(() => import("../../../Modules/WishList/Page"));
 
 const Navigation = () => {
   const routes = (
@@ -28,6 +29,7 @@ const Navigation = () => {
       <Route path="/product-list" element={<ProductList />} />
       <Route path="/my-cart" element={<MyCart />} />
       <Route path="/product-registration" element={<ProductRegistration />} />
+      <Route path="/wish-list" element={<WishList />} />
       <Route path="/" element={<Navigate to="/login" />} />
     </Routes>
   );
